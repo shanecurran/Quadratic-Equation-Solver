@@ -13,16 +13,16 @@
 
 function getSolutions($coefficients) {
    return array(
-        (($coefficients[1] * -1) + sqrt((pow($coefficients[1], 2) - 4 * $coefficients[0] * $coefficients[2]))) / (2 * $coefficients[0]), // Possible value of x #1
-        (($coefficients[1] * -1) - sqrt((pow($coefficients[1], 2) - 4 * $coefficients[0] * $coefficients[2]))) / (2 * $coefficients[0]) // Possible value of x #2
+        (($coefficients["b"] * -1) + sqrt((pow($coefficients["b"], 2) - 4 * $coefficients["a"] * $coefficients["c"]))) / (2 * $coefficients["a"]), // Possible value of x #1
+        (($coefficients["b"] * -1) - sqrt((pow($coefficients["b"], 2) - 4 * $coefficients["a"] * $coefficients["c"]))) / (2 * $coefficients["a"]) // Possible value of x #2
     );
 }
 
 // Example usage
 $coefficients = array(
-    1, // a
-    -4, // b
-    -14 // c
+    "a" => 1, // a
+    "b" => -4, // b
+    "c" => -14 // c
 );
 
 echo json_encode(getSolutions($coefficients));
