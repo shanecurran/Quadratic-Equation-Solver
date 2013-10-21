@@ -2,7 +2,7 @@
 /*
  *  Using the quadratic formula to solve a quadratic equation
  *
- *  ax² + bx + c
+ *  ax² + bx + c = 0
  *
  *  -b ± sqrt(b² - 4ac)
  *  ______________
